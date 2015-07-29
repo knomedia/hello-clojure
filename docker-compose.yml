@@ -1,0 +1,10 @@
+web:
+  build: .
+  volumes:
+    - .:/usr/src/app
+  ports:
+    - "3000"
+  command: "lein run"
+  environment:
+    VIRTUAL_HOST: "hello-clojure.docker"
+    CLOJURE_ENV: 'development'
